@@ -26,3 +26,11 @@ if has('gui_macvim')
      au GUIEnter * set fullscreen
    endif
 endif
+
+" jslint.vim
+function! s:javascript_filetype_settings()
+  autocmd BufLeave     <buffer> call jslint#clear()
+  autocmd BufWritePost <buffer> call jslint#check()
+  autocmd CursorMoved  <buffer> call jslint#message()
+endfunction
+autocmd FileType javascript call s:javascript_filetype_settings()

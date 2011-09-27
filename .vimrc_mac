@@ -1,0 +1,28 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'basyura/jslint.vim'
+
+"行番号
+set number
+
+if has('gui_macvim')
+   " タブを常に表示
+   set showtabline=2
+   
+   " 透過
+   set transparency=10
+   
+   " カーソル行をハイライト
+   set cursorline
+   
+   " フルスクリーン
+   if has("gui_running")
+     set fuoptions=maxvert,maxhorz
+     au GUIEnter * set fullscreen
+   endif
+endif

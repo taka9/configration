@@ -1,0 +1,50 @@
+" Vundle
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=%vim_home%\runtime\bundle\vundle.git\
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" Plugin
+Bundle 'basyura/jslint.vim'
+
+" カラー設定:
+colorscheme evening
+
+"フォント設定
+set guifont=Osaka－等幅:h11  
+
+"行番号表示
+set number
+
+" fullscreen
+"-----------------------------------------------------------
+nnoremap <F11> :call ToggleFullScreen()<CR>
+function! ToggleFullScreen()
+  if &guioptions =~# 'C'
+    set guioptions-=C
+    if exists('s:go_temp')
+      if s:go_temp =~# 'm'
+        set guioptions+=m
+      endif
+      if s:go_temp =~# 'T'
+        set guioptions+=T
+      endif
+    endif
+    simalt ~r
+  else
+    let s:go_temp = &guioptions
+    set guioptions+=C
+    set guioptions-=m
+    set guioptions-=T
+    simalt ~x
+  endif
+endfunction
+
+"透過設定
+gui
+set transparency=220

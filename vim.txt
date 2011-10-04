@@ -1,0 +1,11 @@
+□ Project.vim
+
+http://www.vim.org/scripts/script.php?script_id=69
+
+解凍したものを vim_home/plugins に移動
+vim を開き、:Project → \C の順に入力
+チュートリアルに従いプロジェクトの設定を行う
+
+helpは
+:help project-settings
+

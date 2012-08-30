@@ -1,0 +1,33 @@
+filetype off
+if has('vim_starting')
+  set runtimepath+=~/.vim/neobundle.vim.git/
+
+  call neobundle#rc(expand('~/.bundle'))
+endif
+
+NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+
+" vim-ruby : VimでRubyを扱う際の最も基本的な拡張機能
+NeoBundle 'vim-ruby/vim-ruby'
+
+" vimshell : vimのshell
+NeoBundle 'Shougo/vimshell.git'
+
+" vimproc : vimから非同期実行。vimshelleで必要
+NeoBundle 'Shougo/vimproc.git'
+
+" YankRing.vim : ヤンクの履歴を管理し、順々に参照、出力できるようにする
+NeoBundle 'YankRing.vim'
+
+" neocomplecache.vim : 補完
+NeoBundle 'Shougo/neocomplcache'
+
+" neocomplcache-snippets-complete.vim : スニペット
+NeoBundle 'Shougo/neocomplcache-snippets-complete'
+
+" thinca/vim-quickrun : プログラムを実行する
+NeoBundle 'thinca/vim-quickrun'
+
+filetype plugin on
+filetype indent on

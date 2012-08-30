@@ -1,36 +1,16 @@
 set nocompatible
-filetype off
 
-set rtp+=~/.vim/vundle.git/
-call vundle#rc()
+" vunlde.vimで管理してるpluginを読み込む
+source ~/.vim/.vimrc.bundle
 
-Bundle 'gmarik/vundle'
-Bundle 'basyura/jslint.vim'
+" 基本設定
+source ~/.vim/.vimrc.basic
 
-"行番号
-set number
+" カラー
+source ~/.vim/.vimrc.color
 
-if has('gui_macvim')
-   " タブを常に表示
-   set showtabline=2
-   
-   " 透過
-   set transparency=10
-   
-   " カーソル行をハイライト
-   set cursorline
-   
-   " フルスクリーン
-   if has("gui_running")
-     set fuoptions=maxvert,maxhorz
-     au GUIEnter * set fullscreen
-   endif
-endif
+" 編集
+source ~/.vim/.vimrc.edit
 
-" jslint.vim
-function! s:javascript_filetype_settings()
-  autocmd BufLeave     <buffer> call jslint#clear()
-  autocmd BufWritePost <buffer> call jslint#check()
-  autocmd CursorMoved  <buffer> call jslint#message()
-endfunction
-autocmd FileType javascript call s:javascript_filetype_settings()
+" 編集
+source ~/.vim/.vimrc.neoconplcache

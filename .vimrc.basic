@@ -1,0 +1,43 @@
+"-------------------------------------------------------------------------------
+"" 基本設定 Basics
+"-------------------------------------------------------------------------------
+"let mapleader = ","              " キーマップリーダー
+set scrolloff=5                   " スクロール時の余白確保
+set nobackup                      " バックアップ取らない
+set autoread                      " 他で書き換えられたら自動で読み直す
+set noswapfile                    " スワップファイル作らない
+"set hidden                       " 編集中でも他のファイルを開けるようにする
+set backspace=indent,eol,start    " バックスペースでなんでも消せるように
+set vb t_vb=                      " ビープをならさない
+set splitbelow                    " 新しいウィンドウを下に開く
+set splitright                    " 新しいウィンドウを右に開く
+set number                        " 行番号
+
+" クリップボード関連
+set clipboard+=unnamed            " OSのクリップボードを使用する
+set mouse=a                       " ターミナルでマウスを使用できるようにする
+set guioptions+=a
+set ttymouse=xterm2
+set clipboard=unnamed             " ヤンクした文字は、システムのクリップボードに入れる
+
+" キーバインド
+imap <C-@> <Esc>                  " C-@ でエスケープ
+map <C-@> <Esc>
+
+" インデント
+set autoindent                    " 自動でインデント
+set smartindent                   " 新しい行を開始したときに、新しい行のインデントを現在行と同じ量にする。)
+set tabstop=2 shiftwidth=2 softtabstop=0 " softtabstopはTabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じ，BSにも影響する
+
+" エンコーディング
+set ffs=unix,dos,mac              " 改行文字
+set encoding=utf-8                " デフォルトエンコーディング
+
+" 指定文字コードで強制的にファイルを開く
+command! Cp932 edit ++enc=cp932
+command! Eucjp edit ++enc=euc-jp
+command! Iso2022jp edit ++enc=iso-2022-jp
+command! Utf8 edit ++enc=utf-8
+command! Jis Iso2022jp
+command! Sjis Cp932
+

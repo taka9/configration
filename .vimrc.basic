@@ -1,7 +1,7 @@
 "-------------------------------------------------------------------------------
 "" 基本設定 Basics
 "-------------------------------------------------------------------------------
-"let mapleader = ","              " キーマップリーダー
+"set mapleader = ","              " キーマップリーダー
 set scrolloff=5                   " スクロール時の余白確保
 set nobackup                      " バックアップ取らない
 set autoread                      " 他で書き換えられたら自動で読み直す
@@ -18,10 +18,9 @@ set clipboard+=unnamed            " OSのクリップボードを使用する
 set mouse=a                       " ターミナルでマウスを使用できるようにする
 set guioptions+=a
 set ttymouse=xterm2
-set clipboard=unnamed             " ヤンクした文字は、システムのクリップボードに入れる
 
 " キーバインド
-imap <C-@> <Esc>                  " C-@ でエスケープ
+map! <C-@> <Esc>
 map <C-@> <Esc>
 
 " インデント
@@ -40,4 +39,3 @@ command! Iso2022jp edit ++enc=iso-2022-jp
 command! Utf8 edit ++enc=utf-8
 command! Jis Iso2022jp
 command! Sjis Cp932
-

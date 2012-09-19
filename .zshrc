@@ -5,18 +5,18 @@ export LANG=ja_JP.UTF-8
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+
 ## Other
 alias la='ls -al'
 
 # 補完
-autoload -U compinit
-compinit
+autoload -U compinit compinit
 ## 補完候補を一覧表示
 setopt auto_list
 ## 補完方法毎にグループ化する。
-#### 補完方法の表示方法
-###   %B...%b: 「...」を太字にする。
-###   %d: 補完方法のラベル
+### 補完方法の表示方法
+### %B...%b: 「...」を太字にする。
+### %d: 補完方法のラベル
 zstyle ':completion:*' format '%B%d%b'
 zstyle ':completion:*' group-name ''
 ## 補完侯補をメニューから選択する。
@@ -36,6 +36,21 @@ setopt prompt_subst
 
 # ビープを鳴らさない
 setopt nobeep
+
+# プロンプト
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '(%s)-[%b]'
+zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+precmd () {
+    psvar=()
+    LANG=en_US.UTF-8 vcs_info
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+autoload colors
+colors
+PROMPT="%{${fg[green]}%}%n %1(v|%F{green}%1v%f|) %% %{${reset_color}%}"
+RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
+PROMPT2="%n>"
 
 # cd
 ## 指定したコマンド名がなく、ディレクトリ名と一致した場合 cd する

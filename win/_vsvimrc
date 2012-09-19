@@ -1,0 +1,5 @@
+imap <C-@> <esc>
+map <C-@> <esc>
+
+" コンマの後に自動的にスペースを挿入
+inoremap , ,<Space>

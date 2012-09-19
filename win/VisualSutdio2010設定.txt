@@ -1,0 +1,19 @@
+Visual Studio 設定
+
+□ Plugin
+・Productivity Power Tools
+・VsVim
+
+□ Productivity Power Tools
+色々と拡張できるツール
+設定しているのは以下
+・変数のハイライト (Highlight Current Line)
+・スクロールバー拡張 (Enhanced Scroll Bar)
+・タブ関連の拡張 (Document Well 2010 Plus)
+
+設定はほぼデフォルトのまま
+変えてるのは、スクロールバーの色とタブ移動のコマンドくらい
+
+□VsVim
+Visual StudioでVim
+設定ファイル : _vsvimrc

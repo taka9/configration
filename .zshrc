@@ -6,11 +6,13 @@ export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
-## Other
-alias la='ls -al'
+## ls
+alias la='ls -alG'
+alias ls='ls -G'
 
 # 補完
-autoload -U compinit compinit
+autoload -U compinit
+compinit
 ## 補完候補を一覧表示
 setopt auto_list
 ## 補完方法毎にグループ化する。
@@ -24,8 +26,7 @@ zstyle ':completion:*' group-name ''
 ###           ただし、補完候補が2つ以上なければすぐに補完する。
 zstyle ':completion:*:default' menu select=2
 ## 補完候補に色を付ける。
-### "": 空文字列はデフォルト値を使うという意味。
-zstyle ':completion:*:default' list-colors ""
+zstyle ':completion:*:default' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 ## 補完候補がなければより曖昧に候補を探す。
 ### m:{a-z}={A-Z}: 小文字を大文字に変えたものでも補完する。
 ### r:|[._-]=*: 「.」「_」「-」の前にワイルドカード「*」があるものとして補完する。

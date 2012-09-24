@@ -2,7 +2,7 @@
 " カラー関連 Colors
 "-------------------------------------------------------------------------------
 
-colorscheme blugrine
+colorscheme solarized
 
 " ハイライト
 syntax enable

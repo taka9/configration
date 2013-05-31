@@ -18,6 +18,7 @@ inoremap , ,<Space>
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
+inoremap \| \|\|<LEFT>
 "inoremap " ""<LEFT>
 "inoremap ' ''<LEFT>
 vnoremap { "zdi^V{<C-R>z}<ESC>

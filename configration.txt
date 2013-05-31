@@ -1,0 +1,34 @@
+Configration
+
+.files入れるだけでは環境構築できないので、補足説明を書いていく
+
+//homebrew
+パッケージ管理
+とりあえずgitだけいれとく
+http://mxcl.github.com/homebrew/
+
+// zsh
+最近のmacには最初からインストールされているようなので
+デフォルトシェルを/bin/zshに変更してやればOK
+
+// neobundle
+vim プラグイン管理
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/neobundle.vim.git
+.vimの下に.bundleディレクトリを作成しておく
+vim から :NeoBundleInstall
+
+// iterm2
+どこから入れるか忘れた
+windowをコマンド＋数字で移動できるようにしとく
+カラーテーマを設定しとく
+solarized
+https://github.com/altercation/solarized
+とりあえず ~/local/iterm2/colorscheme/ あたりにいれてiterm2からインポート
+
+// vim
+kaoriyaのvimをいれる
+カラーテーマを設定
+solarized
+https://github.com/altercation/solarized
+
+これと.filesで環境が作れると思う。

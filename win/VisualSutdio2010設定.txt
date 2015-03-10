@@ -1,19 +1,28 @@
-Visual Studio �ݒ�
+Visual Studio 設定
 
-�� Plugin
-�EProductivity Power Tools
-�EVsVim
+□ Plugin
+・Productivity Power Tools
+・VsVim
 
-�� Productivity Power Tools
-�F�X�Ɗg���ł���c�[��
-�ݒ肵�Ă���͈̂ȉ�
-�E�ϐ��̃n�C���C�g (Highlight Current Line)
-�E�X�N���[���o�[�g�� (Enhanced Scroll Bar)
-�E�^�u�֘A�̊g�� (Document Well 2010 Plus)
+□ Productivity Power Tools
+色々と拡張できるツール
+設定しているのは以下
+・変数のハイライト (Highlight Current Line)
+・スクロールバー拡張 (Enhanced Scroll Bar)
+・タブ関連の拡張 (Document Well 2010 Plus)
 
-�ݒ�͂قڃf�t�H���g�̂܂�
-�ς��Ă�̂́A�X�N���[���o�[�̐F�ƃ^�u�ړ��̃R�}���h���炢
+設定はほぼデフォルトのまま
+変えてるのは、スクロールバーの色とタブ移動のコマンドくらい
 
-��VsVim
-Visual Studio��Vim
-�ݒ�t�@�C�� : _vsvimrc
+□ VsVim
+Visual Studio で Vim
+設定ファイル : _vsvimrc
+
+thinkpad を使用する場合はマウスの中ボタンを無効にしたい
+（スクロール時に中ボタンを押すとペーストが動くため）
+
+X-Mouse Button Control でボタンの無効化が可能
+アプリケーションごとに設定可
+
+gvim ではマッピングで中ボタンの無効化ができるが
+vsVim の設定ではできないみたい

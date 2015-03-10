@@ -1,0 +1,34 @@
+set number                        " 行番号
+
+" キーバインド
+map! <C-@> <Esc>
+map <C-@> <Esc>
+map! <C-J> <Esc>
+map <C-J> <Esc>
+
+map <MiddleMouse> <Nop>
+imap <MiddleMouse> <Nop>
+map <2-MiddleMouse> <Nop>
+imap <2-MiddleMouse> <Nop>
+map <3-MiddleMouse> <Nop>
+imap <3-MiddleMouse> <Nop>
+map <4-MiddleMouse> <Nop>
+imap <4-MiddleMouse> <Nop>
+
+" インデント
+set autoindent                    " 自動でインデント
+set smartindent                   " 新しい行を開始したときに、新しい行のインデントを現在行と同じ量にする。)
+set tabstop=2 shiftwidth=2 softtabstop=0 " softtabstopはTabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じ，BSにも影響する
+
+" Tabキーを空白に変換
+set expandtab
+
+set nobackup
+
+set nf=""
+
+" コンマの後に自動的にスペースを挿入
+inoremap , ,<Space>
+
+colorscheme desert
+syntax enable

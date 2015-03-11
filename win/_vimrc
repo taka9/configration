@@ -29,6 +29,3 @@ set nf=""
 
 " コンマの後に自動的にスペースを挿入
 inoremap , ,<Space>
-
-colorscheme desert
-syntax enable

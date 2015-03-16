@@ -27,5 +27,8 @@ set nobackup
 
 set nf=""
 
+set nowrap
+set guioptions+=b
+
 " コンマの後に自動的にスペースを挿入
 inoremap , ,<Space>

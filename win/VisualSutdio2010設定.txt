@@ -26,3 +26,10 @@ X-Mouse Button Control でボタンの無効化が可能
 
 gvim ではマッピングで中ボタンの無効化ができるが
 vsVim の設定ではできないみたい
+
+□ XKeymacs
+Right Ctrl キーは通常のwindows コマンドを使用できるようにする
+1. 詳細 -> その他 で 「C-」から「RightControl」を削除
+2. Pass Through に RightControl を追加
+
+http://d.hatena.ne.jp/chiheisen/20100605/1275752452
